@@ -42,6 +42,7 @@ pipeline {
       }
       steps {
         echo "Continuing with deployment - approved by ${APPROVER}"
+        publishEvent simpleEvent('hello-api-deploy-event')
       }
     }
   }
